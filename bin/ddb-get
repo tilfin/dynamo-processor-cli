@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const program = require('commander');
+
+program
+  .option('-l, --local', 'use DynamoDB Local')
+  .option('-p, --profile [name]', 'AWS profile name')
+  .option('-r, --region [name]', 'Database region name')
+  .parse(process.argv);
+
+const args = program.args;
+require('../lib/get')(
+  args[0], args.slice(1), program
+);

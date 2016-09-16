@@ -2,18 +2,18 @@
   "name": "dynamo-processor-cli",
   "version": "0.1.0",
   "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "author": "Toshimitsu Takahashi",
   "license": "MIT",
   "preferGlobal": true,
   "bin": {
-    "dpc": "bin/dpc"
+    "ddb": "bin/ddb",
+    "ddb-get": "bin/ddb-get",
+    "ddb-put": "bin/ddb-put"
   },
   "dependencies": {
-    "aws-sdk": "^2.6.1",
-    "dynamo-processor": "^0.2.2",
-    "minimist": "^1.2.0"
+    "aws-sdk": "^2.6.3",
+    "commander": "^2.9.0",
+    "dynamo-processor": "^0.2.2"
   }
 }
